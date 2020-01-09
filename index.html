@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Countdown timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="header">Time left in 2020</h1>
+    <select>
+        <option value="1">US presidential election</option>
+        <option value="2">New year 2021</option>
+        <option value="3">Football Euro torunament</option>
+        <option value="4">World Snooker Championship</option>
+        <option value="5">Predicted Brexit</option>
+        <option value="6">2020 World Expo</option>
+        <option value="7">NASA's Mars 2020 mission</option>
+    </select>
+    <button class="prep-dates">Submit</button>
+
+    <label>Your date:</label>
+    <input type="date" class="users-date">
+    <button class="users-date-submit">Submit</button>
+
+    <div class="timer">
+        <div class="label">
+            <p class="days">Days</p>
+            <p class="days-counter"></p>
+        </div>
+        <div class="label">
+            <p class="hours">Hours</p>
+            <p class="hours-counter"></p>
+        </div>
+        <div class="label">
+            <p class="minutes">Minutes</p>
+            <p class="minutes-counter"></p>
+        </div>
+        <div class="label">
+            <p class="seconds">Seconds</p>
+            <p class="seconds-counter"></p>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
