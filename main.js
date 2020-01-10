@@ -12,34 +12,30 @@ let date, days, hours, minutes, seconds;
 
 preparedDatesBtn.addEventListener('click', function () {
     const indexOfSelectedOption = selectBox.selectedIndex;
+    updatingEventName(indexOfSelectedOption);
     switch (selectBox.value) {
         case '1':
             date = new Date('November 3, 2020 00:00:00');
-            header.textContent = `${selectBox[indexOfSelectedOption].text}`;
             break;
         case '2':
             date = new Date('January 1, 2021 00:00:00');
-            header.textContent = `${selectBox[indexOfSelectedOption].text}`;
             break;
         case '3':
             date = new Date('June 12, 2020 00:00:00');
-            header.textContent = `${selectBox[indexOfSelectedOption].text}`;
             break;
         case '4':
             date = new Date('April 18, 2020 00:00:00');
-            header.textContent = `${selectBox[indexOfSelectedOption].text}`;
             break;
         case '5':
             date = new Date('January 31, 2020 00:00:00');
-            header.textContent = `${selectBox[indexOfSelectedOption].text}`;
             break;
         case '6':
             date = new Date('October 20, 2020 00:00:00');
-            header.textContent = `${selectBox[indexOfSelectedOption].text}`;
             break;
         case '7':
             date = new Date('July 17, 2020 00:00:00');
-            header.textContent = `${selectBox[indexOfSelectedOption].text}`;
+            break;
+        default:
             break;
     }
     setImmediateInterval(count, 1000);
@@ -73,6 +69,10 @@ function uploadData() {
     hoursParagraph.textContent = hours;
     minutesParagraph.textContent = minutes;
     secondsParagraph.textContent = seconds;
+}
+
+function updatingEventName(index) {
+    header.textContent = `${selectBox[index].text}`;
 }
 
 function setImmediateInterval(funcToRun, ms) {

@@ -1,8 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(23, 139, 110);
     font-family: arial;
+}
+
+body {
+    background: linear-gradient(to right, #c02425, #f0cb35);
 }
 
 h1 {
@@ -58,14 +61,11 @@ div.time p:nth-child(2) {
     margin-top: 25px;
 }
 
-input {
-    border: 1px solid black;
-    font-size: 15px;
-}
-
+input,
 select {
     border: 1px solid black;
     font-size: 15px;
+    background: linear-gradient(to left, #d45555, #eed15d);
 }
 
 button {
@@ -74,4 +74,6 @@ button {
     padding: 4px;
     margin: 10px;
     cursor: pointer;
+    background: linear-gradient(to right, #d45454, #ebce5b);
+
 }
