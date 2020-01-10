@@ -1,16 +1,16 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: arial;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     background: linear-gradient(to right, #c02425, #f0cb35);
 }
 
-h1 {
+h1.header {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 45px;
     text-transform: uppercase;
     font-size: 60px;
 }
@@ -75,5 +75,110 @@ button {
     margin: 10px;
     cursor: pointer;
     background: linear-gradient(to right, #d45454, #ebce5b);
+}
 
+@media (max-width: 820px) {
+    h1.header {
+        margin: 30px 0 0 0;
+        font-size: 45px;
+    }
+
+    .timer div {
+        height: 70px;
+    }
+
+    div.time p:nth-child(1) {
+        font-size: 22px;
+    }
+
+    div.time p:nth-child(2) {
+        font-size: 35px;
+    }
+
+    .forms-info {
+        font-size: 27px;
+    }
+
+    input,
+    select {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 3px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 640px) {
+    h1.header {
+        margin-top: 20px;
+        font-size: 35px;
+    }
+
+    div.time p:nth-child(1) {
+        font-size: 20px;
+    }
+
+    div.time p:nth-child(2) {
+        font-size: 34px;
+    }
+
+    .forms-info {
+        font-size: 22px;
+    }
+
+    input,
+    select {
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 3px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 400px) and (orientation: portrait) {
+    h1.header {
+        font-size: 33px;
+        margin-bottom: 50px;
+    }
+
+    .timer {
+        height: 250px;
+        width: 100vw;
+        margin-bottom: 80px;
+    }
+
+    div.time p:nth-child(1) {
+        font-size: 22px;
+    }
+
+    div.time p:nth-child(2) {
+        font-size: 35px;
+    }
+
+    .forms-info {
+        font-size: 25px;
+    }
+
+    .create-event {
+        display: flex;
+        flex-direction: column;
+    }
+
+    input,
+    select {
+        font-size: 15px;
+        margin: 10px;
+    }
+
+    button {
+        font-size: 15px;
+        padding: 3px;
+        margin: 5px;
+    }
 }
