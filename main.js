@@ -8,6 +8,7 @@ const dateInput = document.querySelector('.users-date');
 const preparedDatesBtn = document.querySelector('.prep-dates');
 const usersDateBtn = document.querySelector('.users-date-submit');
 const usersEventName = document.querySelector('.users-event-name');
+let clearingInterval;
 let date, days, hours, minutes, seconds;
 
 preparedDatesBtn.addEventListener('click', function () {
@@ -52,6 +53,7 @@ usersDateBtn.addEventListener('click', function () {
         usersEventName.value = '';
     } else {
         alert(`You can't go back in time :)`);
+        wrongDate();
     }
 })
 
@@ -77,5 +79,14 @@ function updatingEventName(index) {
 
 function setImmediateInterval(funcToRun, ms) {
     funcToRun(date);
-    return setInterval(funcToRun, ms);
+    return clearingInterval = setInterval(funcToRun, ms);
+}
+
+function wrongDate() {
+    clearInterval(clearingInterval);
+    header.textContent = 'Countdown timer';
+    daysParagraph.textContent = '';
+    hoursParagraph.textContent = '';
+    minutesParagraph.textContent = '';
+    secondsParagraph.textContent = '';
 }
